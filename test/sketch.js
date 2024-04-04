@@ -7,6 +7,10 @@ var lastY = 0;
 var lifeTime = 20;
 var oldColor = [0, 0, 0];
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);ss
+}
+
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
