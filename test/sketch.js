@@ -8,7 +8,7 @@ var lifeTime = 20;
 var oldColor = [0, 0, 0];
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);ss
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function setup() {
@@ -35,8 +35,8 @@ function draw() {
 }
 
 function randomPoint() {
-  lastX = random(0, 600);
-  lastY = random(0, 600);
+  lastX = random(0, windowWidth);
+  lastY = random(0, windowHeight);
   circle(lastX, lastY, 10);
   xi = 0;
   yi = 0;
