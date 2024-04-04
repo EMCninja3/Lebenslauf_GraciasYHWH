@@ -1,3 +1,4 @@
+var canvas;
 var xi = 0;
 var yi = 0;
 
@@ -7,7 +8,8 @@ var lifeTime = 20;
 var oldColor = [0, 0, 0];
 
 function setup() {
-  createCanvas(600, 600);
+  canvas = createCanvas(600, 600);
+  canvas.position(0,0);
   colorMode(HSB, 100);
   var oldColor = color(random(0, 100), random(0, 100), random(0, 100));
 }
