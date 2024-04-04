@@ -8,8 +8,10 @@ var lifeTime = 20;
 var oldColor = [0, 0, 0];
 
 function setup() {
-  canvas = createCanvas(600, 600);
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
+  canvas.style('z-index', '-1');
+  
   colorMode(HSB, 100);
   var oldColor = color(random(0, 100), random(0, 100), random(0, 100));
 }
