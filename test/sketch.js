@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background(120);
+  //background(120);
   fill(oldColor[0] + xi, oldColor[0] + yi, 100);
   stroke(oldColor[0] + xi, oldColor[0] + yi, 80);
   circle(lastX + xi, lastY + yi, lifeTime);
