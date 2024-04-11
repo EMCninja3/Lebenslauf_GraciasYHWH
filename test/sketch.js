@@ -18,7 +18,7 @@ function setup() {
   
   colorMode(HSB, 100);
   var oldColor = color(random(0, 100), random(0, 100), random(0, 100));
-  background(220);
+  //background(220);
 }
 
 function draw() {
