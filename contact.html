@@ -9,7 +9,6 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/validator.js"></script>
     <style>
         html,
         body,
@@ -20,6 +19,10 @@
         h5,
         h6 {
             font-family: "Roboto", sans-serif
+        }
+
+        .error {
+            border-color: red;
         }
     </style>
 </head>
@@ -41,7 +44,7 @@
 
     <!-- Page Container -->
     <div class="w3-content w3-margin-top" style="max-width:1400px;">
-        <form action="confirmed.html" method="get" class="w3-container w3-card-4 w3-light-grey w3-text-teal w3-margin">
+        <form onsubmit="handleSubmit(event)" class="w3-container w3-card-4 w3-light-grey w3-text-teal w3-margin">
             <h2 class="w3-center">Contact Me</h2>
 
             <div class="w3-row w3-section">
@@ -64,31 +67,31 @@
                     <input class="w3-input w3-border" name="last" type="text" placeholder="Street">
                 </div>
             </div>
-            
-            <!-- City -->
-            <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class="w3-xxlarge material-icons">location_on</i></div>
-                <div class="w3-rest">
-                    <input class="w3-input w3-border" name="last" type="text" placeholder="City" id="cityNameInput">
-                </div>
-            </div>
-            
+
             <!-- PLZ -->
             <div class="w3-row w3-section">
                 <div class="w3-col" style="width:50px"><i class="w3-xxlarge material-icons">location_on</i></div>
                 <div class="w3-rest">
-                    <input class="w3-input w3-border" name="last" type="text" placeholder="PLZ" id="results">
+                    <input class="w3-input w3-border" name="last" type="text" placeholder="PLZ" id="zipCodeInput">
                 </div>
             </div>
 
-            
-            
-            
+            <!-- City -->
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class="w3-xxlarge material-icons">location_on</i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="last" type="text" placeholder="City" id="cityInput">
+                </div>
+            </div>
+
+
+
+
 
             <div class="w3-row w3-section">
                 <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
                 <div class="w3-rest">
-                    <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+                    <input class="w3-input w3-border" id="email" name="email" type="text" placeholder="Email">
                 </div>
             </div>
 
@@ -119,6 +122,7 @@
         <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </footer>
 
+    <script src="js/validator.js"></script>
 </body>
 
 </html>
